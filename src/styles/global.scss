@@ -1,0 +1,72 @@
+@import url('https://use.typekit.net/vym6yib.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .candidate {
+        border: 1px solid black;
+        &_img {
+            height: 30rem;
+        }
+    }
+    .form {
+        input {
+            @apply border-t-0 border-x-0 bg-transparent focus:outline-none w-[20%] h-[2.5rem] border-b-2  placeholder:bg-transparent placeholder:text-gray-500 text-xl
+        }
+        label{
+            @apply font-bold text-xl
+        }
+    }
+    .btn{
+        @apply border rounded-2xl border-blue-800 shadow-lg shadow-black text-xl bg-blue-800 text-white px-10 pt-2 pb-3
+    }
+    .invalid {
+        border-bottom: 2px solid red;
+        -webkit-animation: shake 0.5s linear;
+        animation: shake 0.5s linear;
+
+        &:focus {
+            border-bottom: 2px solid red;
+        }
+    }
+    .invalid-reg{
+        filter: invert(14%) sepia(97%) saturate(5842%) hue-rotate(2deg) brightness(99%) contrast(118%);
+    }
+    @keyframes shake {
+
+        8%,
+        41% {
+            transform: translateX(-10px);
+        }
+
+        25%,
+        58% {
+            transform: translateX(10px);
+        }
+
+        75% {
+            transform: translateX(-5px);
+        }
+
+        92% {
+            transform: translateX(5px);
+        }
+
+        0%,
+        100% {
+            transform: translateX(0);
+        }
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    html {
+        color-scheme: dark;
+    }
+
+    body {
+        color: white;
+        background: black;
+    }
+}
